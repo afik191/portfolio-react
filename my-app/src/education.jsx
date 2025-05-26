@@ -28,7 +28,7 @@ const EducationAndSkills = () => {
               <h3 className="text-xl font-semibold text-gray-800">2nd year Computer Science student</h3>
               <p className="text-sm text-gray-600">HIT Holon - 2024 to 2026 (expected)</p>
               <p className="mt-2 text-gray-700">
-                Relevant Courses: Algorithms, Web Development, Data Structures, Networks
+                Relevant Courses: Algorithms, Data Structures, Networks, Advanced Programming in C and more
               </p>
             </div>
           </div>
