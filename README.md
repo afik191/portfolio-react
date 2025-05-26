@@ -15,10 +15,3 @@ This is a personal portfolio website built with **React** and deployed on **Verc
 - Create React App
 - Vercel (for deployment)
 
-## 📁 Project Structure
-my-app/
-├── public/
-├── src/
-│ ├── assets/
-│ └── index.jsx
-├── package.json
