@@ -9,7 +9,16 @@ const projectsData = [
     tech: ["Python","Juypter-notebook"],
     githubLink: "https://github.com/afik191/MachineLearningProject",
     liveDemoLink: "#",
-  }
+  },
+  {
+  title: "Real-Time Location Sharing App",
+  description:
+    "A full-stack web app for real-time location sharing in groups, Users can create accounts, join groups, and share live locations with others. Still in active development.",
+  image: "/realtime_location_app.png", 
+  tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Cloudinary"],
+  githubLink: "https://github.com/afik191/realtime-location-app",
+  liveDemoLink: "https://realtime-location-app.onrender.com"
+}
 ];
 
 const Projects = () => {
