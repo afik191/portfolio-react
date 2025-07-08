@@ -11,6 +11,7 @@ import HeroSection from './herosection.jsx';
 import EducationAndSkills from './education.jsx';
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
+import { Analytics } from "@vercel/analytics/react"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,12 +19,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
   <React.StrictMode>
-    <div >
+    <div > 
      <Navbar/>
      <HeroSection/>
      <EducationAndSkills/>
      <Projects/>
      <Contact/>
+     <Analytics/>
    </div>
   </React.StrictMode>
 );
