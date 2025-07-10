@@ -116,29 +116,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-
-            {/* Phone */}
-            <div className="flex items-center space-x-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-smartphone h-8 w-8 text-accent flex-shrink-0"
-              >
-                <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-                <path d="M12 18h.01"></path>
-              </svg>
-              <div>
-                <h4 className="font-semibold text-lg text-primary">Phone</h4>
-                <div className="hover:underline">0556606990</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
