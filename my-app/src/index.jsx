@@ -12,6 +12,7 @@ import EducationAndSkills from './education.jsx';
 import Projects from './projects.jsx';
 import Contact from './contact.jsx';
 import { Analytics } from "@vercel/analytics/react"
+import LegalBanner from './LegalBanner.jsx';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -25,6 +26,7 @@ root.render(
      <EducationAndSkills/>
      <Projects/>
      <Contact/>
+     <LegalBanner/>
      <Analytics/>
    </div>
   </React.StrictMode>
