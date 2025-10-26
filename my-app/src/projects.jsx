@@ -18,6 +18,15 @@ const projectsData = [
   tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Cloudinary"],
   githubLink: "https://github.com/afik191/realtime-location-app",
   liveDemoLink: "https://realtime-location-app.onrender.com"
+},
+{
+  title: "Intelligent robotic arm", 
+  description:
+    "An academic project developed at the Holon Institute of Technology (HIT) as part of the Robotics & Software Engineering course. The project demonstrates how low-cost hardware and AI-based vision can be integrated to create an autonomous robotic arm capable of sorting objects by color.",
+  image: "/robotic_arm.jpg", 
+  tech: ["React", "Arduino", "C++","Seeed grove vision AI"],
+  githubLink: "https://github.com/afik191/intellegnt-robotic-arm.git",
+  liveDemoLink: "https://www.youtube.com/watch?v=WaWYLHGAR-I"
 }
 ];
 
