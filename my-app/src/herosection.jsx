@@ -15,7 +15,7 @@ const HeroSection = () => {
                     Hello there, I'm  <h1 className=' text-blue-300'> Afik </h1>
                 </h1>
                 <p class="text-lg md:text-xl text-foreground/80 mb-8 leading-relaxed">
-                 A Second-year Computer Science student passionate about web development, AI and more. Eager to learn, grow, and contribute in a hands-on, real-world environment.
+                 A third-year Computer Science student passionate about web development, AI and more. Eager to learn, grow, and contribute in a hands-on, real-world environment.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a class=" bg-slate-400  inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 shadow-md hover:shadow-lg transition-shadow" href="#contact">
