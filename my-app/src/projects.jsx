@@ -80,16 +80,14 @@ const Projects = () => {
         Live Demo
       </a>
     )}
-    {/* Status Light pushed to the right with tooltip */}
+    {/* Status Light */}
     <span
-      title={status === "done" ? "Finished" : "In Progress"}
       className={`ml-auto w-3 h-3 rounded-full ${
         status === "done" ? "bg-green-500" : "bg-orange-400"
       }`}
     ></span>
   </div>
 );
-
 
 
   return (
