@@ -75,7 +75,7 @@ const Projects = () => {
         href={liveDemoLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
+        className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-black hover:bg-primary/90 h-9 rounded-md px-3"
       >
         Live Demo
       </a>
