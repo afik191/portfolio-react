@@ -59,35 +59,36 @@ const Projects = () => {
   };
 
   const renderButtons = (githubLink, liveDemoLink, status) => (
-    <div className="items-center p-6 pt-0 flex justify-start gap-2">
-      {githubLink && (
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent h-9 rounded-md px-3"
-        >
-          GitHub
-        </a>
-      )}
-      {liveDemoLink && liveDemoLink !== "#" && (
-        <a
-          href={liveDemoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
-        >
-          Live Demo
-        </a>
-      )}
-      {/* Status Light Inline */}
-      <span
-        className={`w-3 h-3 rounded-full ${
-          status === "done" ? "bg-green-500" : "bg-orange-400"
-        }`}
-      ></span>
-    </div>
-  );
+  <div className="p-6 pt-0 flex items-center gap-2">
+    {githubLink && (
+      <a
+        href={githubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent h-9 rounded-md px-3"
+      >
+        GitHub
+      </a>
+    )}
+    {liveDemoLink && liveDemoLink !== "#" && (
+      <a
+        href={liveDemoLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
+      >
+        Live Demo
+      </a>
+    )}
+    {/* Status Light */}
+    <span
+      className={`ml-auto w-3 h-3 rounded-full ${
+        status === "done" ? "bg-green-500" : "bg-orange-400"
+      }`}
+    ></span>
+  </div>
+);
+
 
   return (
     <section id="projects" className="bg-gray-50 py-16 px-6 min-h-svh">
