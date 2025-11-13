@@ -9,7 +9,7 @@ const projectsData = [
     tech: ["Python", "Juypter-notebook"],
     githubLink: "https://github.com/afik191/MachineLearningProject",
     liveDemoLink: "#",
-    status: "done", 
+    status: "done",
   },
   {
     title: "Real-Time Location Sharing App",
@@ -19,7 +19,7 @@ const projectsData = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Cloudinary"],
     githubLink: "https://github.com/afik191/realtime-location-app",
     liveDemoLink: "https://realtime-location-app.onrender.com",
-    status: "in-progress", 
+    status: "in-progress",
   },
   {
     title: "Intelligent robotic arm",
@@ -29,7 +29,7 @@ const projectsData = [
     tech: ["React", "Arduino", "C++", "Seeed grove vision AI"],
     githubLink: "https://github.com/afik191/intellegnt-robotic-arm.git",
     liveDemoLink: "https://www.youtube.com/watch?v=WaWYLHGAR-I",
-    status: "done", 
+    status: "done",
   },
 ];
 
@@ -58,12 +58,42 @@ const Projects = () => {
     );
   };
 
+  const renderButtons = (githubLink, liveDemoLink, status) => (
+    <div className="items-center p-6 pt-0 flex justify-start gap-2">
+      {githubLink && (
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent h-9 rounded-md px-3"
+        >
+          GitHub
+        </a>
+      )}
+      {liveDemoLink && liveDemoLink !== "#" && (
+        <a
+          href={liveDemoLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
+        >
+          Live Demo
+        </a>
+      )}
+      {/* Status Light Inline */}
+      <span
+        className={`w-3 h-3 rounded-full ${
+          status === "done" ? "bg-green-500" : "bg-orange-400"
+        }`}
+      ></span>
+    </div>
+  );
+
   return (
     <section id="projects" className="bg-gray-50 py-16 px-6 min-h-svh">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-10">Projects</h2>
 
-        {/* Mobile Carousel */}
         {isMobile ? (
           <div className="relative">
             <div className="relative rounded-lg border bg-card text-card-foreground flex flex-col h-full overflow-hidden shadow-lg transition-shadow duration-300">
@@ -100,41 +130,13 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-              <div className="items-center p-6 pt-0 flex justify-start gap-2">
-                {projectsData[currentIndex].githubLink && (
-                  <a
-                    href={projectsData[currentIndex].githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent h-9 rounded-md px-3"
-                  >
-                    GitHub
-                  </a>
-                )}
-                {projectsData[currentIndex].liveDemoLink &&
-                  projectsData[currentIndex].liveDemoLink !== "#" && (
-                    <a
-                      href={projectsData[currentIndex].liveDemoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
-                    >
-                      Live Demo
-                    </a>
-                  )}
-              </div>
-
-              {/* Status Light (Mobile) */}
-              <div
-                className={`absolute bottom-3 right-3 w-3 h-3 rounded-full ${
-                  projectsData[currentIndex].status === "done"
-                    ? "bg-green-500"
-                    : "bg-orange-400"
-                }`}
-              ></div>
+              {renderButtons(
+                projectsData[currentIndex].githubLink,
+                projectsData[currentIndex].liveDemoLink,
+                projectsData[currentIndex].status
+              )}
             </div>
 
-            {/* Navigation Buttons */}
             <button
               onClick={prevProject}
               className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 shadow-md"
@@ -151,7 +153,6 @@ const Projects = () => {
             </button>
           </div>
         ) : (
-          /* Grid for Desktop */
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map(
               ({
@@ -200,36 +201,7 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  <div className="items-center p-6 pt-0 flex justify-start gap-2">
-                    {githubLink && (
-                      <a
-                        href={githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-sm font-medium border border-input bg-background hover:bg-accent h-9 rounded-md px-3"
-                      >
-                        GitHub
-                      </a>
-                    )}
-                    {liveDemoLink && liveDemoLink !== "#" && (
-                      <a
-                        href={liveDemoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 text-sm font-medium bg-primary text-white hover:bg-primary/90 h-9 rounded-md px-3"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-                       {/* Status Light (Desktop) */}
-                       <div
-                        className={`absolute bottom-3 right-3 w-3 h-3 rounded-full ${
-                        status === "done" ? "bg-green-500" : "bg-orange-400"
-                        }`}
-                       ></div>
-                  </div>
-
-                 
+                  {renderButtons(githubLink, liveDemoLink, status)}
                 </div>
               )
             )}
