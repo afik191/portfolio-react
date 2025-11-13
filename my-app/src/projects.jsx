@@ -6,31 +6,31 @@ const projectsData = [
     description:
       "Smart ML system that predicts California housing prices using features like income, house age, and population.",
     image: "/california.jpg",
-    tech: ["Python", "Juypter-notebook"],
+    tech: ["Python","Juypter-notebook"],
     githubLink: "https://github.com/afik191/MachineLearningProject",
     liveDemoLink: "#",
     status: "done",
   },
   {
-    title: "Real-Time Location Sharing App",
+    title: "Real-Time Location Sharing App", 
     description:
       "A full-stack web app for real-time location sharing in groups, Users can create accounts, join groups, and share live locations with others. Still in active development.",
-    image: "/realtime_location_app.png",
+    image: "/realtime_location_app.png", 
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "Cloudinary"],
     githubLink: "https://github.com/afik191/realtime-location-app",
     liveDemoLink: "https://realtime-location-app.onrender.com",
     status: "in-progress",
   },
   {
-    title: "Intelligent robotic arm",
+    title: "Intelligent robotic arm", 
     description:
       "An academic project developed at the Holon Institute of Technology (HIT) as part of the Robotics & Software Engineering course. The project demonstrates how low-cost hardware and AI-based vision can be integrated to create an autonomous robotic arm capable of sorting objects by color.",
-    image: "/robotic_arm.jpg",
-    tech: ["React", "Arduino", "C++", "Seeed grove vision AI"],
+    image: "/robotic_arm.jpg", 
+    tech: ["React", "Arduino", "C++","Seeed grove vision AI"],
     githubLink: "https://github.com/afik191/intellegnt-robotic-arm.git",
     liveDemoLink: "https://www.youtube.com/watch?v=WaWYLHGAR-I",
     status: "done",
-  },
+  }
 ];
 
 const Projects = () => {
@@ -52,9 +52,9 @@ const Projects = () => {
     setCurrentIndex(prev => prev === projectsData.length - 1 ? 0 : prev + 1);
   };
 
-  // Render GitHub + Live Demo + Status Light with tooltip
+  // Render GitHub + Live Demo + Status Light inline
   const renderButtons = (githubLink, liveDemoLink, status) => (
-    <div className="p-6 pt-0 flex items-center gap-2 group">
+    <div className="p-6 pt-0 flex items-center gap-2">
       {githubLink && (
         <a
           href={githubLink}
@@ -106,17 +106,13 @@ const Projects = () => {
           Live Demo
         </a>
       )}
-      {/* Status light with Tailwind tooltip */}
-      <div className="ml-auto relative group cursor-pointer">
-        <span
-          className={`w-4 h-4 rounded-full ${
-            status === "done" ? "bg-green-500" : "bg-orange-400"
-          }`}
-        ></span>
-        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 hidden group-hover:block px-2 py-1 text-xs text-white bg-black rounded whitespace-nowrap z-10">
-          {status === "done" ? "Finished" : "In Progress"}
-        </div>
-      </div>
+      {/* Status light to the right with tooltip */}
+      <span
+        title={status === "done" ? "Finished" : "In Progress"}
+        className={`ml-auto w-3 h-3 rounded-full ${
+          status === "done" ? "bg-green-500" : "bg-orange-400"
+        }`}
+      ></span>
     </div>
   );
 
@@ -187,7 +183,15 @@ const Projects = () => {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map(
-              ({ title, description, image, tech, githubLink, liveDemoLink, status }) => (
+              ({
+                title,
+                description,
+                image,
+                tech,
+                githubLink,
+                liveDemoLink,
+                status,
+              }) => (
                 <div
                   key={title}
                   className="rounded-lg border bg-card text-card-foreground flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -203,11 +207,17 @@ const Projects = () => {
                         style={{ color: "transparent" }}
                       />
                     </div>
-                    <div className="font-semibold tracking-tight text-2xl">{title}</div>
-                    <div className="text-muted-foreground text-sm min-h-[3em]">{description}</div>
+                    <div className="font-semibold tracking-tight text-2xl">
+                      {title}
+                    </div>
+                    <div className="text-muted-foreground text-sm min-h-[3em]">
+                      {description}
+                    </div>
                   </div>
                   <div className="p-6 pt-0 flex-grow">
-                    <h4 className="font-semibold mb-2 text-sm text-muted-foreground">Technologies Used:</h4>
+                    <h4 className="font-semibold mb-2 text-sm text-muted-foreground">
+                      Technologies Used:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {tech.map((techName) => (
                         <div
