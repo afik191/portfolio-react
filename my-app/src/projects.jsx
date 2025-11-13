@@ -221,14 +221,15 @@ const Projects = () => {
                         Live Demo
                       </a>
                     )}
+                       {/* Status Light (Desktop) */}
+                       <div
+                        className={`absolute bottom-3 right-3 w-3 h-3 rounded-full ${
+                        status === "done" ? "bg-green-500" : "bg-orange-400"
+                        }`}
+                       ></div>
                   </div>
 
-                  {/* Status Light (Desktop) */}
-                  <div
-                    className={`absolute bottom-3 right-3 w-3 h-3 rounded-full ${
-                      status === "done" ? "bg-green-500" : "bg-orange-400"
-                    }`}
-                  ></div>
+                 
                 </div>
               )
             )}
