@@ -30,6 +30,16 @@ const projectsData = [
     githubLink: "https://github.com/afik191/intellegnt-robotic-arm.git",
     liveDemoLink: "https://www.youtube.com/watch?v=WaWYLHGAR-I",
     status: "done",
+  },
+  {
+    title: "GenAI Floor Plan Detector",
+    description: 
+      "An End-to-End Generative AI system for detecting critical architectural changes. Features a custom synthetic data pipeline (using DETR & SAM) to overcome data scarcity, and an explainable classifier achieving 96% recall for safety-critical modifications.",
+    image: "/genai_floorplan.png", 
+    tech: ["Python", "PyTorch", "Generative AI", "DETR", "SAM", "Scikit-learn"],
+    githubLink: "https://github.com/AdiHaim22/built-in_GenAI.git", 
+    liveDemoLink: "#",
+    status: "done",
   }
 ];
 
