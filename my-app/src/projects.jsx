@@ -6,7 +6,7 @@ const projectsData = [
     description:
       "Smart ML system that predicts California housing prices using features like income, house age, and population.",
     image: "/california.jpg",
-    tech: ["Python","Juypter-notebook"],
+    tech: ["Python","Supervised Learning","Juypter-notebook","Scikit-learn","Pandas","NumPy","Matplotlib"],
     githubLink: "https://github.com/afik191/MachineLearningProject",
     liveDemoLink: "#",
     status: "done",
