@@ -2,17 +2,31 @@ import React from 'react';
 import {
   FaGraduationCap,
   FaCode,
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
   FaJs,
   FaNode,
   FaJava,
-  FaLaptopCode,
+  FaNetworkWired,
+  FaCubes,
+  FaServer,
+  FaBrain,
+  FaTerminal,
+  FaRobot,
+  FaAws,
+  FaLinux,
+  FaInfinity,
+  FaDatabase,
   FaMicrochip,
-  FaToolbox,
+  FaCloud,
 } from 'react-icons/fa';
-import { SiC, SiGit, SiGithub, SiPython } from 'react-icons/si';
+import {
+  SiPython,
+  SiMongodb,
+  SiPytorch,
+  SiHuggingface,
+  SiGit,
+  SiJest,
+  SiPostman,
+} from 'react-icons/si';
 
 const EducationAndSkills = () => {
   return (
@@ -40,28 +54,36 @@ const EducationAndSkills = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-10">
-            <SkillCategory title="Frontend" icon={<FaLaptopCode className="text-slate-700" />}>
-              <Skill icon={<FaHtml5 className="text-[#E34F26] text-4xl mx-auto" />} label="HTML5" />
-              <Skill icon={<FaCss3Alt className="text-[#1572B6] text-4xl mx-auto" />} label="CSS3" />
+            <SkillCategory title="Languages" icon={<FaCode className="text-slate-700" />}>
+              <Skill icon={<SiPython className="text-[#3776AB] text-4xl mx-auto" />} label="Python" />
+              <Skill icon={<FaJava className="text-[#007396] text-4xl mx-auto" />} label="Java" />
               <Skill icon={<FaJs className="text-[#F7DF1E] text-4xl mx-auto" />} label="JavaScript" />
-              <Skill icon={<FaReact className="text-[#61DAFB] text-4xl mx-auto" />} label="React" />
+              <Skill icon={<FaDatabase className="text-[#336791] text-4xl mx-auto" />} label="SQL" />
             </SkillCategory>
-            <SkillCategory title="Backend" icon={<FaMicrochip className="text-slate-700" />}>
+
+            <SkillCategory title="Backend & Databases" icon={<FaServer className="text-slate-700" />}>
               <Skill icon={<FaNode className="text-[#339933] text-4xl mx-auto" />} label="Node.js" />
+              <Skill icon={<FaNetworkWired className="text-[#0096D6] text-4xl mx-auto" />} label="REST APIs" />
+              <Skill icon={<FaCubes className="text-[#FF9900] text-4xl mx-auto" />} label="Microservices" />
+              <Skill icon={<SiMongodb className="text-[#47A248] text-4xl mx-auto" />} label="MongoDB" />
             </SkillCategory>
           </div>
           
           <div className="space-y-10">
-            <SkillCategory title="Languages" icon={<FaCode className="text-slate-700" />}>
-              <Skill icon={<FaJava className="text-[#007396] text-4xl mx-auto" />} label="Java" />
-              <Skill icon={<SiC className="text-[#A8B9CC] text-4xl mx-auto" />} label="C" />
-              <Skill icon={<SiPython className="text-[#3776AB] text-4xl mx-auto" />} label="Python" />
+            <SkillCategory title="AI & Machine Learning" icon={<FaBrain className="text-slate-700" />}>
+              <Skill icon={<SiPytorch className="text-[#EE4C2C] text-4xl mx-auto" />} label="PyTorch" />
+              <Skill icon={<SiHuggingface className="text-[#FFD21E] text-4xl mx-auto" />} label="Hugging Face" />
+              <Skill icon={<FaRobot className="text-[#10A37F] text-4xl mx-auto" />} label="Generative AI" />
+              <Skill icon={<FaTerminal className="text-[#000000] text-4xl mx-auto" />} label="Prompt Eng." />
             </SkillCategory>
 
-            <SkillCategory title="Tools" icon={<FaToolbox className="text-slate-700" />}>
-              <Skill icon={<FaCode className="text-[#06B6D4] text-4xl mx-auto" />} label="Tailwind CSS" />
+            <SkillCategory title="Cloud, Automation & QA" icon={<FaCloud className="text-slate-700" />}>
+              <Skill icon={<FaAws className="text-[#FF9900] text-4xl mx-auto" />} label="AWS" />
+              <Skill icon={<FaLinux className="text-[#FCC624] text-4xl mx-auto" />} label="Linux" />
+              <Skill icon={<FaInfinity className="text-[#2088FF] text-4xl mx-auto" />} label="CI/CD" />
+              <Skill icon={<SiJest className="text-[#C21325] text-4xl mx-auto" />} label="Jest" />
+              <Skill icon={<SiPostman className="text-[#FF6C37] text-4xl mx-auto" />} label="Postman" />
               <Skill icon={<SiGit className="text-[#F05032] text-4xl mx-auto" />} label="Git" />
-              <Skill icon={<SiGithub className="text-black text-4xl mx-auto" />} label="GitHub" />
             </SkillCategory>
           </div>
         </div>
