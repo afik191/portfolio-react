@@ -17,7 +17,7 @@ const projectsData = [
       "An End-to-End Generative AI system for detecting critical architectural changes. Features a custom synthetic data pipeline (using DETR & SAM) to overcome data scarcity, and an explainable classifier achieving 96% recall for safety-critical modifications.",
     image: "/genai_floor_plan.png",
     tech: ["Python", "PyTorch", "Generative AI", "DETR", "SAM", "Scikit-learn"],
-    githubLink: "#",
+    githubLink: "https://github.com/AdiHaim22/built-in_GenAI",
     liveDemoLink: "#",
     status: "done",
   },
