@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities; 
 
-
-
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    @apply bg-secondary text-slate-800 antialiased;
+  }
+}
