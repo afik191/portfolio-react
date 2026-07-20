@@ -110,11 +110,11 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="flex flex-col p-6 space-y-3">
+              <div className="flex flex-col p-6 space-y-3 flex-grow">
                 <h3 className="font-bold text-2xl text-slate-900">{projectsData[currentIndex].title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed min-h-[4rem]">{projectsData[currentIndex].description}</p>
+                <p className="text-slate-600 text-sm leading-relaxed">{projectsData[currentIndex].description}</p>
               </div>
-              <div className="p-6 pt-0 flex-grow">
+              <div className="p-6 pt-0">
                 <div className="flex flex-wrap gap-2">
                   {projectsData[currentIndex].tech.map((techName) => (
                     <span key={techName} className="inline-flex items-center rounded-full bg-secondary/80 text-primary px-3 py-1 text-xs font-semibold border border-primary/10">
@@ -148,9 +148,9 @@ const Projects = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <div className="flex flex-col p-8 space-y-4">
+                <div className="flex flex-col p-8 space-y-4 flex-grow">
                   <h3 className="font-bold text-2xl text-slate-900">{title}</h3>
-                  <p className="text-slate-600 text-base leading-relaxed flex-grow">{description}</p>
+                  <p className="text-slate-600 text-base leading-relaxed">{description}</p>
                 </div>
                 <div className="p-8 pt-0">
                   <div className="flex flex-wrap gap-2">
