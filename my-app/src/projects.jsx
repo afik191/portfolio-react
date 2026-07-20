@@ -12,6 +12,16 @@ const projectsData = [
     status: "done",
   },
   {
+    title: "GenAI Floor Plan Detector",
+    description:
+      "End-to-end AI pipeline detecting structural changes in architectural floor plans. Integrates DETR, SAM, and Stable Diffusion to generate synthetic data, achieving an F1 score of 0.81.",
+    image: "/genai_floor_plan.jpg", // placeholder, assuming it might exist or they can update it
+    tech: ["Python", "PyTorch", "Hugging Face", "Computer Vision"],
+    githubLink: "#",
+    liveDemoLink: "#",
+    status: "done",
+  },
+  {
     title: "Intelligent robotic arm", 
     description:
       "An academic project developed at the Holon Institute of Technology (HIT). Demonstrates how low-cost hardware and AI-based vision can be integrated to create an autonomous robotic arm capable of sorting objects by color.",
