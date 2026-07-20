@@ -14,9 +14,9 @@ const projectsData = [
   {
     title: "GenAI Floor Plan Detector",
     description:
-      "End-to-end AI pipeline detecting structural changes in architectural floor plans. Integrates DETR, SAM, and Stable Diffusion to generate synthetic data, achieving an F1 score of 0.81.",
-    image: "/genai_floor_plan.jpg", // placeholder, assuming it might exist or they can update it
-    tech: ["Python", "PyTorch", "Hugging Face", "Computer Vision"],
+      "An End-to-End Generative AI system for detecting critical architectural changes. Features a custom synthetic data pipeline (using DETR & SAM) to overcome data scarcity, and an explainable classifier achieving 96% recall for safety-critical modifications.",
+    image: "/genai_floor_plan.png",
+    tech: ["Python", "PyTorch", "Generative AI", "DETR", "SAM", "Scikit-learn"],
     githubLink: "#",
     liveDemoLink: "#",
     status: "done",
