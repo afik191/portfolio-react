@@ -31,6 +31,16 @@ const projectsData = [
     liveDemoLink: "https://www.youtube.com/watch?v=WaWYLHGAR-I",
     status: "done",
   },
+  {
+    title: "Cost Manager RESTful Web Services",
+    description:
+      "Final project for the Asynchronous Server-Side Development course. A microservices-based REST API for managing personal cost items, built with Node.js, Express, MongoDB Atlas, and Pino.",
+    image: "/cost_manager.jpg",
+    tech: ["Node.js", "Express", "MongoDB", "Mongoose", "Pino", "REST API"],
+    githubLink: "https://github.com/afik191/Cost-Manager-RESTful-Web-Services",
+    liveDemoLink: "#",
+    status: "done",
+  }
 ];
 
 const Projects = () => {
