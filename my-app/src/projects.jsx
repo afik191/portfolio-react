@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 
 const projectsData = [
   {
-    title: "ML Regression: House Prices",
-    description:
-      "Smart ML system that predicts California housing prices using features like income, house age, and population.",
-    image: "/california.jpg",
-    tech: ["Python", "Jupyter Notebook", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
-    githubLink: "https://github.com/afik191/MachineLearningProject",
-    liveDemoLink: "#",
-    status: "done",
+  title: "KnowledgeHub AI",
+  description:
+    "A multi-tenant AI knowledge platform that enables organizations to chat with their documents. Features an agentic RAG pipeline with LangGraph, hybrid semantic and keyword search, query rewriting, source citations, and secure tenant-isolated retrieval.",
+  image: "/knowledgehub.png",
+  tech: ["Python", "FastAPI", "LangGraph", "LangChain", "RAG", "React", "ChromaDB"],
+  githubLink: "https://github.com/afik191/KnowledgeHub",
+  liveDemoLink: "https://knowledgehub-frontend-570332617893.me-west1.run.app",
+  status: "done",
   },
   {
     title: "GenAI Floor Plan Detector",
@@ -22,6 +22,16 @@ const projectsData = [
     status: "done",
   },
   {
+    title: "Cost Manager RESTful Web Services",
+    description:
+      "Final project for the Asynchronous Server-Side Development course. A microservices-based REST API for managing personal cost items, built with Node.js, Express, MongoDB Atlas, and Pino.",
+    image: "/cost_manager.jpg",
+    tech: ["Node.js", "Express", "MongoDB", "Mongoose", "Pino", "REST API"],
+    githubLink: "https://github.com/afik191/Cost-Manager-RESTful-Web-Services",
+    liveDemoLink: "#",
+    status: "done",
+  },
+   {
     title: "Intelligent robotic arm",
     description:
       "An academic project developed at the Holon Institute of Technology (HIT). Demonstrates how low-cost hardware and AI-based vision can be integrated to create an autonomous robotic arm capable of sorting objects by color.",
@@ -32,12 +42,12 @@ const projectsData = [
     status: "done",
   },
   {
-    title: "Cost Manager RESTful Web Services",
+    title: "ML Regression: House Prices",
     description:
-      "Final project for the Asynchronous Server-Side Development course. A microservices-based REST API for managing personal cost items, built with Node.js, Express, MongoDB Atlas, and Pino.",
-    image: "/cost_manager.jpg",
-    tech: ["Node.js", "Express", "MongoDB", "Mongoose", "Pino", "REST API"],
-    githubLink: "https://github.com/afik191/Cost-Manager-RESTful-Web-Services",
+      "Smart ML system that predicts California housing prices using features like income, house age, and population.",
+    image: "/california.jpg",
+    tech: ["Python", "Jupyter Notebook", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+    githubLink: "https://github.com/afik191/MachineLearningProject",
     liveDemoLink: "#",
     status: "done",
   }
@@ -62,7 +72,7 @@ const Projects = () => {
     setCurrentIndex((prev) => (prev === projectsData.length - 1 ? 0 : prev + 1));
   };
 
-  const renderButtons = (githubLink, liveDemoLink, status) => (
+  const renderButtons = (githubLink, liveDemoLink) => (
     <div className="p-6 pt-0 flex items-center gap-3">
       {githubLink && (
         <a
@@ -113,10 +123,7 @@ const Projects = () => {
           Live Demo
         </a>
       )}
-      <div title={status === "done" ? "Completed" : "In Progress"} className="ml-auto flex items-center gap-2">
-        <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">{status}</span>
-        <span className={`w-3 h-3 rounded-full shadow-inner ${status === "done" ? "bg-emerald-500" : "bg-amber-400"}`}></span>
-      </div>
+
     </div>
   );
 
@@ -160,8 +167,7 @@ const Projects = () => {
               </div>
               {renderButtons(
                 projectsData[currentIndex].githubLink,
-                projectsData[currentIndex].liveDemoLink,
-                projectsData[currentIndex].status
+                projectsData[currentIndex].liveDemoLink
               )}
             </div>
 
@@ -208,7 +214,7 @@ const Projects = () => {
           </div>
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10">
-            {projectsData.map(({ title, description, image, tech, githubLink, liveDemoLink, status }) => (
+            {projectsData.map(({ title, description, image, tech, githubLink, liveDemoLink }) => (
               <div
                 key={title}
                 className="rounded-2xl border border-slate-100 bg-white flex flex-col h-full overflow-hidden shadow-lg shadow-slate-200/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
@@ -238,7 +244,7 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                {renderButtons(githubLink, liveDemoLink, status)}
+                {renderButtons(githubLink, liveDemoLink)}
               </div>
             ))}
           </div>
